@@ -10,3 +10,57 @@
         }
     }
 }
+
+
+body:not(.category-header) {
+  // hides banners based on outcome of shouldShow
+  .category-header-banner {
+    display: none;
+  }
+}
+
+div[class^="category-title-header"] {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+
+  .category-title-contents {
+    max-width: 500px;
+    padding: 40px;
+
+    .d-icon-lock {
+      height: 0.75em;
+      width: 0.75em;
+      vertical-align: 0;
+    }
+  }
+
+  .category-title-description {
+    a,
+    a:visited {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  // styles that impact the category icons theme component
+
+  .category-icon-widget-wrapper {
+    display: inline-block;
+
+    .category-icon-widget {
+      display: flex;
+      .category-icon {
+        display: flex;
+        @if $override_category_icon_color == "true" {
+          color: currentColor !important; // overrides inline style
+        }
+        .d-icon {
+          height: 0.75em;
+          width: 0.75em;
+        }
+      }
+    }
+  }
+}
