@@ -1,0 +1,12 @@
+.category-slug .d-header {
+    background: rgba($bgcolor1, $transp1);
+    .d-header-icons .d-icon  {
+        color: $icon_color1;
+    }
+    .header-sidebar-toggle button .d-icon {
+        color: $icon_color1;
+        &:hover {
+            color: $icon_color_h1;
+        }
+    }
+}
